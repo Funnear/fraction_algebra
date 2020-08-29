@@ -5,6 +5,10 @@ This project is created by @Funnear as a part of Python programming study and fo
 The project contains one class - 'Fraction' that is used to demonstrate Fraction Algebra in human readable format. 
 It also has unit tests designed using PyTest framework. 
 
+# License
+[Boost Software License 1.0](http://opensource.org/licenses/BSL-1.0) #BSL-1.0
+
+Copyright (c) 2020 Faniia Prazdnikova
 
 # Usage
 To use Fraction class make import in Python console or in other Python script:
