@@ -66,7 +66,7 @@ class TestMathOperations:
         (Fraction(3, 11), Fraction(30, 11), 3, 1),
         (Fraction(2, 5), Fraction(2, 7), 24, 35),
         (Fraction(9, 3), Fraction(7, 8), 31, 8),
-        (Fraction(6, 8), Fraction(0), 3, 4),
+        (Fraction(6, 8), Fraction(0, 1), 3, 4),
         (Fraction(1, -3), Fraction(2, 3), 1, 3),
         (Fraction(7, 8), Fraction(-6, 10), 11, 40),
         (Fraction(-7, 8), Fraction(-6, 10), -59, 40),

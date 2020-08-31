@@ -14,32 +14,34 @@ class Fraction:
             self.numerator //= fraction_gcd
             self.denominator //= fraction_gcd
 
-    def __init__(self, a, b=1):
+    def __init__(self, numerator: int, denominator: int) -> object:
+        """
 
-        if b == 0:
-            raise ArithmeticError("Denominator can't be zero")
-        elif b is None:
-            b = 1
+        :type numerator: int
+        :type denominator: int
+        """
+        if denominator == 0:
+            raise ArithmeticError("Denominator can't be zero.")
+        elif denominator is None:
+            raise AttributeError("Denominator can't be None for Fraction object. Pass 1 in case of whole number.")
 
-        if a < 0 and b < 0:
-            sign = 1
-        elif a < 0 or b < 0:
+        if numerator * denominator < 0:
             sign = -1
         else:
             sign = 1
 
-        a = abs(a)
-        b = abs(b)
+        numerator = abs(numerator)
+        denominator = abs(denominator)
 
-        if a == 0:
+        if numerator == 0:
             self.numerator = 0
             self.denominator = 1
-        elif a == b:
+        elif numerator == denominator:
             self.numerator = 1
             self.denominator = 1
         else:
-            self.numerator = a
-            self.denominator = b
+            self.numerator = numerator
+            self.denominator = denominator
             self.reduce()
 
         self.numerator *= sign
