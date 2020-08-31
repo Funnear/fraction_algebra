@@ -6,7 +6,7 @@ The project contains one class - 'Fraction' that is used to demonstrate Fraction
 It also has unit tests designed using PyTest framework. 
 
 # License
-[Boost Software License 1.0](http://opensource.org/licenses/BSL-1.0) #BSL-1.0
+[Boost Software License 1.0](https://www.boost.org/users/license.html)
 
 Copyright (c) 2020 Faniia Prazdnikova
 
