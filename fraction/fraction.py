@@ -55,29 +55,24 @@ class Fraction:
         a = abs(self.numerator)
         b = self.denominator
 
-        if a == b:
-            display_string += '1'
+        if a % b == 0:
+            display_string += str(a // b)
             return display_string
-        elif a > b:
-            if a % b == 0:
-                display_string += str(a // b)
-                return display_string
-            else:
-                display_integer = a // b
-                display_numerator = a % b
-                display_denominator = b
 
-                if a != 0:
-                    reduced = Fraction(display_numerator, display_denominator)
-                    reduced.reduce()
-                    display_numerator = reduced.numerator
-                    display_denominator = reduced.denominator
+        display_integer = a // b
+        display_numerator = a % b
+        display_denominator = b
 
-                display_string += '{} {}/{}'.format(display_integer, display_numerator, display_denominator)
-                return display_string
-        else:
-            display_string += '{}/{}'.format(a, b)
-            return display_string
+        if a != 0:
+            reduced = Fraction(display_numerator, display_denominator)
+            reduced.reduce()
+            display_numerator = reduced.numerator
+            display_denominator = reduced.denominator
+
+        if display_integer == 0:
+            return display_string + '{}/{}'.format(display_numerator, display_denominator)
+
+        return display_string + '{} {}/{}'.format(display_integer, display_numerator, display_denominator)
 
     def __add__(self, other):
 
