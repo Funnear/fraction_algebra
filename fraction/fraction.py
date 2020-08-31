@@ -111,23 +111,11 @@ class Fraction:
         sum_of_fractions = Fraction(sum_numerator, sum_denominator)
         return sum_of_fractions
 
+    def __neg__(self):
+        self.numerator *= -1
+
     def __sub__(self, other):
-
-        if isinstance(other, Fraction):
-            subtraction_denominator = other.denominator
-            subtraction_numerator = (-1) * other.numerator
-            subtraction = Fraction(subtraction_numerator, subtraction_denominator)
-
-            difference = self + subtraction
-
-        elif isinstance(other, int):
-            difference = self + (-1) * other
-
-        else:
-            message = 'Operation {} - {} is not implemented yet.'.format(self, other)
-            raise NotImplementedError(message)
-
-        return difference
+        return self + other * -1
 
     def __mul__(self, other):
 
@@ -162,4 +150,3 @@ class Fraction:
 
     def __float__(self):
         return self.numerator / self.denominator
-
